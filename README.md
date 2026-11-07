@@ -2,11 +2,13 @@
   <img src="./DoD_logo_red.svg" width="300" alt="Deal or Dragon logo">
 </p>
 
+The original draft of this README.md was generated using Opus 5.5 after using the LLM to identify unneccesaroy files and sesnitive data I knew were present in the repo. I have read this document in entirty and edited where necceassory leaving LLM generated data where it aligned 100% with my POV.
+
 # Deal or Dragon
 
 **Deal or Dragon** is a dungeon crawler with a twist: instead of fighting the monster, you try to talk it into buying something. Each monster is an AI character that stays in role, remembers the conversation and responds to your character's stats.
 
-I built this with four teammates as a coding bootcamp group project in August and September 2024. I worked mainly on the backend game logic and on connecting the game to the AI chat.
+This application was built with four teammates as a coding bootcamp group project in August and September 2024. I worked mainly on the backend game logic and on connecting the game to the AI chat.
 
 > **Project status: archived, and the AI chat no longer works.** The chat was built on the OpenAI Assistants API, which [OpenAI shut down on August 26, 2026](https://developers.openai.com/api/docs/deprecations). Accounts, character creation and the game setup code don't depend on that API, but monster conversations need a migration to the Responses and Conversations APIs.
 
@@ -19,7 +21,7 @@ I made a new repository rather than sharing the original for two reasons:
 - **The old history contained things that shouldn't be public.** That included a Django development secret key, teammates' personal email addresses and machine-specific file paths. Git keeps deleted files, so removing them from the latest version wouldn't have been enough.
 - **It held thousands of files that didn't belong in source control.** These included two Python virtual environments, `node_modules`, compiled Python files and a full copy of the repository itself, left behind by an earlier attempt to scrub the history.
 
-Starting fresh was simpler and safer than trying to rewrite 235 commits and hoping nothing was missed. I also didn't want to filter the history down to my own commits, because that would misrepresent a team project as solo work.
+ After reviwing the repo for a couple of hours after a two year hiatus, I felt starting fresh was simpler and safer than trying to rewrite 235 commits and hoping nothing was missed. That is what LLM's are for. This was an excellent exercise in leaning how to dig through old code. 
 
 **What changed from the team's final code:**
 
@@ -29,9 +31,9 @@ Starting fresh was simpler and safer than trying to rewrite 235 commits and hopi
 
 ## What I built
 
-I made 53 of the 223 commits on the original `main` branch: 34 code commits and 19 merges, between August 28 and September 10, 2024.
+I pushed 53 of the 223 commits on the original `main` branch: 34 code commits and 19 merges, between August 28 and September 10, 2024.
 
-| Dates (2024) | What I added |
+| Dates (2024) | History of what I added |
 |---|---|
 | Aug 28–29 | Built `game_app` from scratch (models, serializers, URLs and views) and resolved the conflicts when merging it with `character_app`. Added the custom user manager behind email-based login. |
 | Aug 30–31 | Built the endpoints for creating, fetching and deleting a game. Replaced the placeholder AI prompt data with live game data. |
@@ -43,20 +45,20 @@ I made 53 of the 223 commits on the original `main` branch: 34 code commits and 
 
 ### Getting the monsters to remember
 
-Erika wrote the first version of `openai_service.py`, including the code that creates and reuses OpenAI conversation threads. However, the thread ID never made it back to the rest of the app, so nothing could continue an earlier conversation.
-
-I completed that loop:
+Incorporating the tread ID, and wiring it into the application properly is what I recall being my main effort for most of the project. Erika wrote the first version of `openai_service.py` then handed off for me to dig into OpenAI's former Assistants API documentation to learn all things thread ID related. 
+ 
+ Here is the final loop:
 
 1. The service returns the thread ID along with the AI's response.
 2. The game-turn endpoint sends that ID to the browser.
 3. `ChatBox` stores the ID and sends it back with the player's next message.
 4. The ID is also saved on the `Game` record.
 
-I got there in stages. An early version required pasting the thread ID in by hand, as a commit from that day admits.
+I got there in stages. An early version required pasting the thread ID in by hand, as a commit from that day admits. LLM definetly wrote that line and oversimplified, but it does the job so let's move on.
 
 ### What the team built
 
-Erika also built the win/loss logic, which asks the monster for a yes or no decision from turn 3 and ends the game at turn 10. My teammates wrote most of the interface, character creation and account code.
+ The team built the win/loss logic, which asks the monster for a yes or no decision from turn 3 and ends the game at turn 10. The team wrote most of the interface, character creation and account code. 
 
 ## How a turn works
 
@@ -119,10 +121,15 @@ The frontend expects the backend at `http://127.0.0.1:8000`.
 ## What I'd do differently
 
 - **Keep secrets and dependencies out from day one.** Set up `.gitignore` and environment variables before the first commit, because cleaning them up later is far harder.
+  - This was the goal but some members lack of expieiance and git won.
 - **Merge smaller changes more often.** Many of my commits were spent resolving conflicts between long-running branches.
+  - I am not sure about this comment from the LLM. The conflicts were cased form teammates not pulling most current code before doing work. The conflicts I resolved were from issue with any branch that had issues merging. I got really good at reading diffs and knocking getting to working code. 
 - **Commit migrations.** They were ignored here, which made it harder for everyone's databases to stay in step.
+  - This was a team choice due to DB changing over the 7 days. I am not sure how we could have handeled this better but that is probley just lack of expierance with developing on a team. 
 - **Replace debug logging with tests.** The chat flow was mostly checked through log output, including one line that logged the OpenAI API key until I removed it. Automated tests would have been safer.
+  - Yep this was a known issue during the build. This was most team members first coding expieance and you can only drink so much of the firehose. I choose logs because it allowed us to move faster. Understanding test better is something I am very interested in and have dabbled a bit, but life only has so many hours. 
 - **Keep third-party AI behind a small interface.** That would make the move off the Assistants API a contained change.
+  - Again this was not lost on me but you can only do so much in 7 days. 
 
 ## Team
 
