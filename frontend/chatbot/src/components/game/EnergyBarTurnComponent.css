@@ -1,0 +1,10 @@
+.energy-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.energy-bar-image {
+    max-width: 100%;
+    height: auto;
+}

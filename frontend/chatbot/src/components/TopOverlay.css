@@ -1,0 +1,93 @@
+.settings-group {
+  top: 22%;
+  left: 2%;
+  z-index: 999;
+  width: 10%;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1vh;
+  position: absolute;
+}
+
+.info-bar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80%;
+  height: 9%;
+  background-color: beige;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  border-bottom: 2px solid black;
+  font-family: "Mouse Memoirs";
+}
+
+#avatar-home {
+  position: absolute;
+  width: 20%;
+  height: 20%;
+  top: 0;
+  left: 0;
+  z-index: 98;
+  border-bottom-right-radius: 10%;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  overflow: hidden;
+  background-color: beige;
+  padding: 1%;
+}
+
+#avatar-box {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-auto-flow: column;
+  gap: 1vh;
+}
+
+#avatar-popup {
+  background: linear-gradient(45deg, #e69268, #dfcf99);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+#info-popup {
+  background: linear-gradient(45deg, #e69268, #dfcf99);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+#settings-popup {
+  background: linear-gradient(45deg, #e69268, #dfcf99);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.settings-drop {
+  width: 100%;
+  height: 100%;
+  animation: dropdown 0.3s none;
+  transform-origin: top;
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+
+@keyframes dropdown {
+  0% {
+    opacity: 0;
+    transform: scaleY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}

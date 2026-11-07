@@ -1,0 +1,56 @@
+.logo {
+  position: relative;
+  width: 100%;
+  background: none;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.logo::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+#logo-top {
+  background-image: url("../../assets/login/DoD_logo_upper.svg");
+  height: calc(100% * (8 / 35));
+  display: inline-block;
+  margin: 0;
+  transform: translateY(-100%);
+  animation: flyIn 1s forwards;
+  position: absolute;
+  top: 10%;
+}
+
+#logo-bottom {
+  background-image: url("../../assets/login/DoD_logo_lower.svg");
+  height: calc(100% * (20 / 33));
+  display: inline-block;
+  margin: 0;
+  animation: fadeIn 5s forwards;
+}
+
+@keyframes flyIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }

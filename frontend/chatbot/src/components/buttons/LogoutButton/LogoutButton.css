@@ -1,0 +1,11 @@
+#logout-button {
+    background-image: url("../../../assets/buttons/button_small_logout_static.svg");
+}
+
+#logout-button:hover {
+    background-image: url("../../../assets/buttons/button_small_logout_hover.svg");
+}
+
+#logout-button:active {
+    background-image: url("../../../assets/buttons/button_small_logout_pressed.svg");
+}

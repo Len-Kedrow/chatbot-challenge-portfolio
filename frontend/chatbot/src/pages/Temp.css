@@ -1,0 +1,40 @@
+#left {
+  background-image: url(../assets/login/login_left.png);
+  width: 50%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform-origin: left;
+  transform: none;
+  animation: open 5s forwards;
+}
+
+#right {
+  background-image: url(../assets/login/login_right.png);
+  width: 50%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform-origin: right;
+  transform: none;
+  animation: open 5s forwards;
+}
+
+#temp-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes open {
+  0% {
+    opacity: 1;
+    transform: rotateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: rotateY(-140%);
+  }
+}

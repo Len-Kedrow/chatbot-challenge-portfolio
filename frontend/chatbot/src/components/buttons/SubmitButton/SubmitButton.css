@@ -1,0 +1,12 @@
+#submit-button {
+    background-image: url("../../../assets/buttons/button_medium_submit_static.svg");
+    padding-bottom: calc(100% / (34 / 15));
+}
+
+#submit-button:hover {
+    background-image: url("../../../assets/buttons/button_medium_submit_hover.svg");
+}
+
+#submit-button:active {
+    background-image: url("../../../assets/buttons/button_medium_submit_pressed.svg");
+}

@@ -1,0 +1,11 @@
+#settings-button {
+    background-image: url("../../../assets/buttons/button_small_settings_static.svg");
+}
+
+#settings-button:hover {
+    background-image: url("../../../assets/buttons/button_small_settings_hover.svg");
+}
+
+#settings-button:active {
+    background-image: url("../../../assets/buttons/button_small_settings_pressed.svg");
+}

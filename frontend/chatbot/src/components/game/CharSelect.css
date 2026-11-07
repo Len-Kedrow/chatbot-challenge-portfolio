@@ -1,0 +1,87 @@
+.card {
+    max-width: 500px; /* Setting a max width for the card */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+    display: flex;
+    flex-direction: row; /* horizontal layout */
+    height: 150px;
+    margin: 0 auto;
+    background: linear-gradient(45deg, #e69268, #dfcf99);
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+/* Getting the image to fill the card vertically */
+.card-img-left {
+    width: auto;
+    height: 100%;
+    object-fit: cover; /* image fits within the card without distortion, need to fix stretched save */
+    border-radius: 10px 0 0 10px;
+}
+
+/* Character stats and name styling */
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.card-body .card-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #444;
+}
+
+.card-body .card-text {
+    display: flex;
+    gap: 10px;
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Temp style for the buttons */
+.card-body .btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+.card-body .btn-success {
+    background-color: #dd6b00;
+    border-color: #dd6b00;
+}
+
+.card-body .btn-success:hover {
+    background-color: #e98e3a;
+    border-color: #e98e3a;
+}
+
+.card-body .btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.card-body .btn-danger:hover {
+    background-color: #c82333;
+}
+
+.card-body .text-center {
+    margin-top: 10px;
+}
+
+.character-selection {
+    margin: 20px auto;
+    text-align: center;
+}
+
+.character-selection h2 {
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 20px;
+}

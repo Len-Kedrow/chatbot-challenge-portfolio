@@ -1,0 +1,11 @@
+#redo-button {
+    background-image: url("../../../assets/buttons/button_small_redo_static.svg");
+}
+
+#redo-button:hover {
+    background-image: url("../../../assets/buttons/button_small_redo_hover.svg");
+}
+
+#redo-button:active {
+    background-image: url("../../../assets/buttons/button_small_redo_pressed.svg");
+}

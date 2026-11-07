@@ -1,0 +1,44 @@
+# keys
+.env
+
+# pycache
+__pycache__/
+*.py[cod]
+**/__pycache__/
+__pycache__
+
+# virtual envs
+backend_env/
+**/backend_env/
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# django
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# dependencies, OS and editor files
+node_modules/
+.DS_Store
+.vscode/
+
+# user uploads created at runtime
+backend/chatbot_proj/media/

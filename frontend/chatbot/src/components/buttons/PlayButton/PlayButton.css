@@ -1,0 +1,12 @@
+#play-button {
+    background-image: url("../../../assets/buttons/button_medium_play_static.svg");
+    padding-bottom: calc(100% / (34 / 15));
+}
+
+#play-button:hover {
+    background-image: url("../../../assets/buttons/button_medium_play_hover.svg");
+}
+
+#play-button:active {
+    background-image: url("../../../assets/buttons/button_medium_play_pressed.svg");
+}

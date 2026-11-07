@@ -1,0 +1,11 @@
+#forward-button {
+    background-image: url("../../../assets/buttons/button_small_next_static.svg");
+}
+
+#forward-button:hover {
+    background-image: url("../../../assets/buttons/button_small_next_hover.svg");
+}
+
+#forward-button:active {
+    background-image: url("../../../assets/buttons/button_small_next_pressed.svg");
+}

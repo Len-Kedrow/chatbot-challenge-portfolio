@@ -1,0 +1,12 @@
+#profile-button {
+    background-image: url("../../../assets/buttons/button_medium_profile_static.svg");
+    padding-bottom: calc(100% / (34 / 15));
+}
+
+#profile-button:hover {
+    background-image: url("../../../assets/buttons/button_medium_profile_hover.svg");
+}
+
+#profile-button:active {
+    background-image: url("../../../assets/buttons/button_medium_profile_pressed.svg");
+}

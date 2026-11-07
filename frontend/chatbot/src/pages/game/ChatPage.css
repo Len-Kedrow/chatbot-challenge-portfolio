@@ -1,0 +1,137 @@
+.chat-page-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.banner-container {
+  position: relative;
+  width: 100%;
+  height: 30vh;
+  max-width: 100%;
+}
+
+.banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Character positioning inside the banner */
+.character-container {
+  position: absolute;
+  top: 8%;
+  left: 3%;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+}
+
+.character-image-frame {
+  position: relative;
+  width: 8vw;
+  height: 8vw;
+  min-width: 120px;
+  min-height: 120px;
+}
+
+.character-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.character-frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.character-details {
+  margin-left: 15px;
+  color: white;
+  font-size: 1rem;
+  background-color: rgba(0, 0, 0, 0.6); /* transparency black background */
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.character-details h3 {
+  margin-bottom: 5px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.character-details p {
+  margin: 3px 0;
+  font-size: 1.2rem;
+  font-weight: medium;
+}
+
+/* Energy bar styling */
+.energy-bar {
+  position: absolute;
+  bottom: 3%;
+  left: 2%;
+  width: 20vw;
+  height: auto;
+  max-width: 300px;
+}
+
+.energy-bar-img {
+  width: 100%;
+  height: auto;
+}
+
+#chat-box {
+  flex-grow: 1;
+  width: 100%;
+  max-width: 100%;
+  height: calc(100vh - 40vh); /* height adjusted based on the banner height */
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: rgba(56, 56, 56, 0.9);
+  overflow-y: auto;
+}
+
+.quit-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 2%;
+  margin-right: 2%;
+  z-index: 999;
+  width: 7%;
+}
+
+#game-quit-yes-no {
+  display: flex;
+  gap: 10%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+#chatpage-close {
+  width: 100% !important;
+  height: 100%;
+}
+
+#quit-popup {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}

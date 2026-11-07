@@ -1,0 +1,19 @@
+.custom-button {
+    position: relative;
+    width: 100%;
+    padding-bottom: calc(100% / (1 / 1));
+    cursor: pointer;
+    background: none;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.custom-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}

@@ -1,0 +1,11 @@
+#menu-button {
+    background-image: url("../../../assets/buttons/button_small_menu_static.svg");
+}
+
+#menu-button:hover {
+    background-image: url("../../../assets/buttons/button_small_menu_hover.svg");
+}
+
+#menu-button:active {
+    background-image: url("../../../assets/buttons/button_small_menu_pressed.svg");
+}

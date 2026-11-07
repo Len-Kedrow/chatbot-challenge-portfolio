@@ -1,0 +1,12 @@
+#items-button {
+    background-image: url("../../../assets/buttons/button_medium_items_static.svg");
+    padding-bottom: calc(100% / (34 / 15));
+}
+
+#items-button:hover {
+    background-image: url("../../../assets/buttons/button_medium_items_hover.svg");
+}
+
+#items-button:active {
+    background-image: url("../../../assets/buttons/button_medium_items_pressed.svg");
+}

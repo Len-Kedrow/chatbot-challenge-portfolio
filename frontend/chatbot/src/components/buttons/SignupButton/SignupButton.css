@@ -1,0 +1,12 @@
+#signup-button {
+    background-image: url("../../../assets/buttons/button_medium_signup_static.svg");
+    padding-bottom: calc(100% / (34 / 15));
+}
+
+#signup-button:hover {
+    background-image: url("../../../assets/buttons/button_medium_signup_hover.svg");
+}
+
+#signup-button:active {
+    background-image: url("../../../assets/buttons/button_medium_signup_pressed.svg");
+}

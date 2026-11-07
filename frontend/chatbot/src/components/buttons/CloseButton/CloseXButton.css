@@ -1,0 +1,11 @@
+#close-button {
+    background-image: url("../../../assets/buttons/button_round_close_static.svg");
+}
+
+#close-button:hover {
+    background-image: url("../../../assets/buttons/button_round_close_hover.svg");
+}
+
+#close-button:active {
+    background-image: url("../../../assets/buttons/button_round_close_pressed.svg");
+}

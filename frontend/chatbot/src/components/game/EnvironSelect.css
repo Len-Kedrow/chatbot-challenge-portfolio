@@ -1,0 +1,46 @@
+.environment-setup {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.environment-card {
+    width: 500px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(45deg, #e6ad68, #dfcf99);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.card-img-left {
+    height: 150px;
+    object-fit: cover;
+    background-size: cover;
+}
+
+.carousel-button {
+    background-color: #195c86;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0 20px;
+}
+
+.carousel-button:hover {
+    background-color: #2776a8;
+}
+
+

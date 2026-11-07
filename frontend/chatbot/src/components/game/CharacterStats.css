@@ -1,0 +1,132 @@
+/* Base styling for the character stats screen */
+.character-stats__box {
+    background-image: url("../../assets/background_app_lighter.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2%;
+    overflow: hidden;
+}
+
+/* Title styling */
+.character-stats__title {
+    font-weight: bold;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Character image container styling */
+.character-stats__image-container {
+    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.character-stats__image-container img {
+    max-width: 250px;
+    max-height: 250px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Name input styling */
+.character-stats__input-container {
+    margin-bottom: 20px;
+}
+
+.character-stats__name-label {
+    font-size: 1.3rem;
+}
+
+.character-stats__input {
+    font-size: 1.2rem;
+    padding: 10px;
+    border: 2px solid #76c9b4;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+}
+
+/* Global points section */
+.character-stats__points h2 {
+    font-size: 1.5rem;
+    color: #ffffff;
+    font-weight: medium;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Container for stats */
+.character-stats__container {
+    width: 100%;
+    max-width: 350px;
+    background-color: rgba(250, 243, 213, 0.8);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Stat controls styling */
+.character-stats__stat {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.character-stats__label {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.character-stats__buttons {
+    display: flex;
+    gap: 10px;
+}
+
+/* Round buttons styling */
+.character-stats__button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.character-stats__button:hover {
+    background-color: #2b9799;
+}
+
+.character-stats__button:disabled {
+    background-color: #888;
+    cursor: not-allowed;
+}
+
+.character-stats__button:focus {
+    outline: none;
+    border-color: #76c9b4;
+}
+
+.character-stats__button:active {
+    background-color: #555;
+}

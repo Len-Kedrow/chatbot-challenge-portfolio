@@ -1,0 +1,84 @@
+#loading-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 99999;
+  background-color: black;
+}
+
+#loading-left {
+  background-image: url(../assets/login/login_left.png);
+  width: 50%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: leftClose 1s forwards;
+}
+
+#loading-left-open {
+  background-image: url(../assets/login/login_left.png);
+  width: 50%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: leftOpen 1s forwards;
+}
+
+#loading-right {
+  background-image: url(../assets/login/login_right.png);
+  width: 50%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: rightClose 1s forwards;
+}
+
+#loading-right-open {
+  background-image: url(../assets/login/login_right.png);
+  width: 50%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: rightOpen 1s forwards;
+}
+
+@keyframes leftClose {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes rightClose {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes leftOpen {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes rightOpen {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
