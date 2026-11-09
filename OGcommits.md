@@ -1,12 +1,12 @@
 # Original commits
 
-This repository starts with a fresh history (see the [README](README.md) for why), so the commit graph here doesn't show who wrote what. This page maps my main contributions to the commits in the team's original repository, which is private, and links to where that code lives now.
+This repository starts with a fresh history (see the [README](README.md) for why). This page maps my main contributions to the commits in the team's original repository, which is private, and links to where that code lives now.
 
 Commit IDs and messages are copied as-is from the original repository.
 
 ## 1. Conversation memory
 
-The work I'm proudest of. Each monster conversation runs on an OpenAI thread, and the app needed to keep reusing the same thread so the monster would remember earlier turns.
+This was a key part of my contribution to the project. I enjoyed the challenge of slowly working through the code and weaving the thread ID in, which allowed us to get as close to completion as we did. 
 
 | Date (2024) | Original commit | Message | What it did |
 |---|---|---|---|
@@ -23,9 +23,9 @@ The work I'm proudest of. Each monster conversation runs on an OpenAI thread, an
 - **Stored on the game:** [`models.py` L10](backend/chatbot_proj/game_app/models.py#L10)
 - **Frontend keeps it and sends it back:** [`ChatBox.jsx` L16–L18](frontend/chatbot/src/components/ChatBox.jsx#L16-L18), [L58–L74](frontend/chatbot/src/components/ChatBox.jsx#L58-L74) and [`chatbotService.jsx` L17–L21](frontend/chatbot/src/utilities/chatbotService.jsx#L17-L21)
 
-## 2. Resolving merge conflicts
+## 2. Merging branches and resolving conflicts
 
-I handled much of the branch integration, often for branches that hadn't been updated from the latest code. In several cases, unresolved conflict markers (`<<<<<<<`, `=======`, `>>>>>>>`) had already been committed into working files, and I cleaned them out.
+The entire team was relatively new to using Git, and this was the first shared repo for all of us. This, of course, meant learning about merge conflicts. Whenever they occurred, I resolved many of them, specifically where the backend and chat branches met, and got everything running again. I enjoy puzzles, and that is what this felt like. Not that I want to do it all the time. I helped Brandon with merging branches into main after he had a few hairy experiences.
 
 | Date (2024) | Original commit | Message | What it did |
 |---|---|---|---|
@@ -40,7 +40,7 @@ I handled much of the branch integration, often for branches that hadn't been up
 
 ## 3. Building the game backend
 
-I created `game_app`, the part of the backend that runs the game itself.
+I created game_app, which holds the data for the different generas you could play. I designed the game's DB schema and connected the LLM to the live game data. The original version just stored the dragon. After finishing the initial build I restructure the DB into Theme, Monster and Location models so the game could be expanded for different genres. Coding the game app gave me the opportunity to learn about using signals in Python for preseeding DBs. 
 
 | Date (2024) | Original commit | Message | What it did |
 |---|---|---|---|
