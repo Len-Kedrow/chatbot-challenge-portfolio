@@ -1,0 +1,35 @@
+//NOTE added 9 Nov 2026 by Len: this was my .jsx trouble shooting file.
+
+/*the file is being used to hold code that I do not understand and I do not want to delete
+but I need to move so I can follow the code better. I will make comments on where code was 
+taken from*/
+
+/*!!!!!!!!START: Removed from chatbotService.jsx after fethching token!!!!!!!!!
+// Axios does not support streaming in browser environment apparently, so using fetch instead (for now)
+            const response = await fetch(`${api.defaults.baseURL}chatbot_app/chatbot/`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Token ${token}`, // CSRF token
+                    // 'X-CSRFToken': csrftoken, // Auth token
+                },
+                body: JSON.stringify({ 
+                    prompt,  // User input prompt
+                }),
+            });
+
+            // Handle the response, no streaming needed here (we're doing full answers back for now)
+            const reader = response.body.getReader();
+            const decoder = new TextDecoder();
+
+            // Reader loop to handle chunks of data
+            let done = false; 
+            while (!done) { 
+                const { value, done: readerDone } = await reader.read();
+                done = readerDone;
+                if (value) {
+                    const chunk = decoder.decode(value, { stream: true });
+                    onData(chunk);  // Process each chunk of data received
+                }
+            }
+!!!!!!!!END: Removed from chatbotService.jsx after fethching token!!!!!!!!!*/
